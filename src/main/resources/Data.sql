@@ -1,0 +1,32 @@
+--INSERT INTO Roles (The_position, Name_User)
+--VALUES (0, 'Admin');
+--
+--INSERT INTO Roles (The_position, Name_User)
+--VALUES (1, 'Organizer');
+--
+--INSERT INTO Roles (The_position, Name_User)
+--VALUES (2, 'Atender');
+--
+--INSERT INTO Users (ID, First_name, Last_name,User_name, Birthday,Gender, Email, Mobile, Isdelete, The_position)
+--VALUES ('1088736817','Khalid', 'Alqahtani','khaleed25','1993-12-21','Male','test@gmail.com', '0552256643',0,0);
+--
+--INSERT INTO Users (ID, First_name, Last_name,User_name, Birthday,Gender, Email, Mobile, Isdelete, The_position)
+--VALUES ('1087542937','Ahmed', 'Alnaser','a99098','21','1990-01-02','test@hotmail.com', '0551544321',0,1);
+--
+--INSERT INTO Users (ID, First_name, Last_name,User_name, Birthday,Gender, Email, Mobile, Isdelete, The_position)
+--VALUES ('1084214368','EID', 'Alsaad','Eid01','2000-07-12','Male','test@yahoo.com', '0505449627', 0, 2);
+--
+--INSERT INTO Event (NAMES_Event, Tybe_Event,C_Event, Time_event, E_Stret, E_City,E_Date,E_Time,Capacity, Edelete, Eimprove,ID_User)
+--VALUES ('Sport','kidsEvent','Male','9 October','aldagaby','Riyadh','2018-12-10','Saturday/17:00:00','200',0,0,1);
+--
+--INSERT INTO Event (NAMES_Event, Tybe_Event,C_Event, Time_event, E_Stret, E_City,E_Date,E_Time,Capacity, Edelete, Eimprove,ID_User)
+--VALUES ('Hikids','kidsEvent','Female','9 October','king-fahad','Qassim','2017-12-10','Friday/21:00:00','643',0,0,2);
+--
+--INSERT INTO Event (NAMES_Event, Tybe_Event,C_Event, Time_event, E_Stret, E_City,E_Date,E_Time,Capacity, Edelete, Eimprove,ID_User)
+--VALUES ('books','edication','Famly','10 October','aldagaby','Riyadh','2018-11-10','Monday/07:15:00','222',0,0,3);
+--
+--INSERT INTO Ticket (Tdelete)
+--VALUES (0);
+--
+--INSERT INTO Rate (The_rate,Rdelete)
+--VALUES ('5',0);
