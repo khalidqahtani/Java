@@ -103,7 +103,7 @@ public class TicketControl {
         return ResponseEntity.ok(ticketService.UserpresentById(tid));}
 
     @PreAuthorize("(hasAnyRole('ORGANIZER','USER'))")
-    @PutMapping (value = "/adminaccess/ticket/unpresent/{tid}")
+    @GetMapping (value = "/adminaccess/ticket/unpresent/{tid}")
     public ResponseEntity unUserpresentByTicketid(@PathVariable Long tid){
         return ResponseEntity.ok(ticketService.unUserpresentByTicketid(tid));}
 
