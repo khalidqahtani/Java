@@ -1,6 +1,7 @@
 package com.khaileid.Service;
 
 import com.khaileid.DTO.TicketDTO;
+import com.khaileid.Entity.EntityEvent;
 import com.khaileid.Entity.EntityTicket;
 import org.springframework.http.ResponseEntity;
 
@@ -30,6 +31,9 @@ public interface TicketService {
      List<EntityTicket> findAllByUserpresentFalse();
      List<EntityTicket> findAllByTicketcancelTrue();
      List<EntityTicket> findAllByTicketcancelFalse();
+
+     List<TicketDTO> findallticketbyevent (Long eid);
+//     List<EntityTicket> findByEidEventid(EntityEvent eid);
 
 }
 

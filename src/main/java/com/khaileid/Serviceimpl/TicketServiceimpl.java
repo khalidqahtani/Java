@@ -1,5 +1,6 @@
 package com.khaileid.Serviceimpl;
 
+import com.khaileid.DTO.EventDTO;
 import com.khaileid.DTO.TicketDTO;
 import com.khaileid.Entity.EntityEvent;
 import com.khaileid.Entity.EntityTicket;
@@ -8,6 +9,7 @@ import com.khaileid.Repository.RepositoryEvent;
 import com.khaileid.Repository.RepositoryTicket;
 import com.khaileid.Repository.RepositoryUser;
 import com.khaileid.Service.TicketService;
+import com.khaileid.config.ObjectMapperUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -172,5 +174,13 @@ public class TicketServiceimpl implements TicketService {
     @Override
     public List<EntityTicket> findAllByTicketcancelFalse() {
         return repositoryTicket.findAllByTicketcancelFalse();
+    }
+
+    @Override
+    public List<TicketDTO> findallticketbyevent(Long eid) {
+        EntityEvent entityEvent= repositoryEvent.findByEventid(eid);
+        List<EntityTicket> entityTickets= repositoryTicket.findByEid(entityEvent);
+        List<TicketDTO> ticketdto = ObjectMapperUtils.mapAll(entityTickets,TicketDTO.class);
+        return ticketdto;
     }
 }

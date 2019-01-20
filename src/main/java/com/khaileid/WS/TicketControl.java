@@ -1,5 +1,7 @@
 package com.khaileid.WS;
 
+import com.khaileid.DTO.EventDTO;
+import com.khaileid.DTO.TicketDTO;
 import com.khaileid.Entity.EntityTicket;
 import com.khaileid.Service.NotificationService;
 import com.khaileid.Service.TicketService;
@@ -96,7 +98,7 @@ public class TicketControl {
         return ResponseEntity.ok(ticketService.UnTicketcancelByTicketid(tid));}
 
     @PreAuthorize("(hasAnyRole('ORGANIZER','USER'))")
-    @PutMapping (value = "/adminaccess/ticket/present/{tid}")
+    @GetMapping (value = "/adminaccess/ticket/present/{tid}")
     public ResponseEntity UserpresentById(@PathVariable Long tid) {
         return ResponseEntity.ok(ticketService.UserpresentById(tid));}
 
@@ -124,4 +126,9 @@ public class TicketControl {
     @GetMapping (value = "/adminaccess/ticket/alluncancel")
     public ResponseEntity findAllByTicketcancelFalse(){
         return ResponseEntity.ok(ticketService.findAllByTicketcancelFalse());}
+
+    @GetMapping(value = "/ticketforevent/{eid}")
+    public List<TicketDTO> findallticketbyevent(@PathVariable Long eid) {
+        return ticketService.findallticketbyevent(eid);
+    }
 }

@@ -30,5 +30,4 @@ public interface RepositoryEvent extends JpaRepository<EntityEvent,Long> {
 
 
 
-
 }

@@ -1,6 +1,7 @@
 package com.khaileid.DTO;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.khaileid.Entity.EntityEvent;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,9 +23,17 @@ public class TicketDTO {
     private LocalDate dateevent;
     private String timeevent;
     private int ticketrate;
+    private EventDTO eid;
+    private UserDTO uid;
 
 
+    public UserDTO getUid() {
+        return uid;
+    }
 
+    public void setUid(UserDTO uid) {
+        this.uid = uid;
+    }
 
     public long getTicketid() {
         return ticketid;
@@ -88,5 +97,13 @@ public class TicketDTO {
 
     public void setTicketrate(int ticketrate) {
         this.ticketrate = ticketrate;
+    }
+
+    public EventDTO getEid() {
+        return eid;
+    }
+
+    public void setEid(EventDTO eid) {
+        this.eid = eid;
     }
 }

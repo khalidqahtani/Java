@@ -32,6 +32,8 @@ public interface RepositoryTicket extends JpaRepository<EntityTicket,Long> {
     EntityTicket findByTicketid (Long ticketid);
 
     List<EntityTicket> findAllByEidEventid(Long eid);
+    List<EntityTicket> findByEid(EntityEvent eid);
+
 
 
 
