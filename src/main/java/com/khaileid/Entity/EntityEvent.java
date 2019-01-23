@@ -48,6 +48,7 @@ public class EntityEvent {
 
     @DateTimeFormat
     private String eventtime;
+    private String description;
 
     @NotNull
     @Min(1)
@@ -138,6 +139,14 @@ public class EntityEvent {
 
     public void setEventtime(String eventtime) {
         this.eventtime = eventtime;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public long getCapacity() {

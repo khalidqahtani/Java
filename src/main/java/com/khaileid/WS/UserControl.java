@@ -84,6 +84,7 @@ public class UserControl {
 
     @PostMapping (value = "/users/registration/{roles}")
     public ResponseEntity addUser(@RequestBody @Valid UserDTO userDTO,@Valid @PathVariable String roles, BindingResult bindingResult) {
+
         if (bindingResult.hasErrors()){
             return ResponseEntity.badRequest().body(bindingResult.getAllErrors());
         }

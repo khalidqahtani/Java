@@ -45,6 +45,7 @@ public class EventDTO {
 
     @DateTimeFormat
     private String eventtime;
+    private String description;
 
     @NotNull
     @Min(1)
@@ -53,7 +54,7 @@ public class EventDTO {
     private boolean edelete;
     private boolean approval;
     private long counter=0;
-    private UserDTO OrgnizerID;
+    private UserDTO orgnizerID;
     private List<CommentDTO> comments;
 
 
@@ -123,6 +124,14 @@ public class EventDTO {
         this.eventtime = eventtime;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public long getCapacity() {
         return capacity;
     }
@@ -157,11 +166,11 @@ public class EventDTO {
 
 
     public UserDTO getOrgnizerID() {
-        return OrgnizerID;
+        return orgnizerID;
     }
 
     public void setOrgnizerID(UserDTO orgnizerID) {
-        OrgnizerID = orgnizerID;
+        this.orgnizerID = orgnizerID;
     }
 
     public List<CommentDTO> getComments() {
