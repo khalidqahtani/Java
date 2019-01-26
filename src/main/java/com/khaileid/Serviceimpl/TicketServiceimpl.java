@@ -39,7 +39,7 @@ public class TicketServiceimpl implements TicketService {
 
     @Override
     public List<EntityTicket> findAllTicketByUser(Long uid) {
-        return repositoryTicket.findAllByUid(repositoryUser.findByUserid(uid));
+        return repositoryTicket.findAllByUidAndTicketcancelFalse(repositoryUser.findByUserid(uid));
     }
 
     @Override

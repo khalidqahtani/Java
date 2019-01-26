@@ -145,6 +145,11 @@ public class EventControl {
         return eventservice.getAlleventActive();
     }
 
+    @GetMapping(value = "/event/khalid")
+    public List<EntityEvent> khalid(){
+        return eventservice.khalid();
+    }
+
     @GetMapping(value = "/myevents/{Orgnizerid}")
     public List<EventDTO> findMyEvent(@PathVariable Long Orgnizerid) {
         return eventservice.findMyEvent(Orgnizerid);

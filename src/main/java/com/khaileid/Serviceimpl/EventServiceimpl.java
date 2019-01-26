@@ -167,6 +167,12 @@ public class EventServiceimpl implements EventService {
     }
 
     @Override
+    public List<EntityEvent> khalid() {
+        LocalDate localDate= LocalDate.now().minusDays(1);
+        return repositoryevent.findTop3ByEdeleteFalseAndApprovalTrueAndEventdateAfter(localDate);
+    }
+
+    @Override
     public List<EventDTO> findMyEvent(Long Orgnizerid) {
         EntityUsers entityUsers= repositoryUser.findByUserid(Orgnizerid);
         List <EntityEvent> entityEvents= repositoryevent.findByOrgnizerID(entityUsers);

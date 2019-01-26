@@ -16,7 +16,7 @@ public interface RepositoryTicket extends JpaRepository<EntityTicket,Long> {
 
 //    EntityEvent findByTicketid(Long ticketid);
 
-    List<EntityTicket> findAllByUid(EntityUsers entityUsers);
+    List<EntityTicket> findAllByUidAndTicketcancelFalse(EntityUsers entityUsers);
     List<EntityTicket> findAllByEid(EntityEvent entityEvent);
     List<EntityTicket> findAllByEidAndUserpresentTrueAndTicketcancelFalse(EntityEvent entityEvent);
     List<EntityTicket> findAllByEidAndUserpresentFalseAndTicketcancelTrue(EntityEvent entityEvent);

@@ -26,6 +26,7 @@ public interface RepositoryEvent extends JpaRepository<EntityEvent,Long> {
     List<EntityEvent> findAllByApprovalTrue();
     List<EntityEvent> findAllByEventdateAfterAndGendereventAndEdeleteFalseAndApprovalTrue(LocalDate eventdate ,String genderevent);
     List<EntityEvent> findByOrgnizerID(EntityUsers entityUsers);
+    List<EntityEvent> findTop3ByEdeleteFalseAndApprovalTrueAndEventdateAfter(LocalDate eventdate);
 
 
 
