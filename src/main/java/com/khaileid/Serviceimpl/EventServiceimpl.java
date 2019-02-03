@@ -167,9 +167,9 @@ public class EventServiceimpl implements EventService {
     }
 
     @Override
-    public List<EntityEvent> khalid() {
+    public List<EntityEvent> Top3event() {
         LocalDate localDate= LocalDate.now().minusDays(1);
-        return repositoryevent.findTop3ByEdeleteFalseAndApprovalTrueAndEventdateAfter(localDate);
+        return repositoryevent.findTop3ByEventdateAfterAndEdeleteFalseAndApprovalTrueOrderByEventidDesc(localDate);
     }
 
     @Override

@@ -5,18 +5,43 @@ INSERT INTO roles(rolename)VALUES ('ROLE_USER');
 
 
 INSERT INTO users (birthday, deleted,email,enable,firstname,gender,lastname,id,password,mobile,username,role )
-VALUES ('1993-12-21','false','ke434028728"gmail.com','true','khalid','MALE','alqahtani','1084214368','$2a$10$i/Cpu7jbtbpYxhpaUB3t3Oz1k6dr5vzEMzwbwDh.awr/qKiZP.iAe','552256643','khaled23','ROLE_ADMIN');
+VALUES ('1993-12-21','false','ke434028728"gmail.com','true','khalid','MALE','alqahtani','1084214368','$2a$10$YxseEOraPI9ioDK//UmpJeOE3aCqAmp6t4dRJ2YX8i/vzTs/sylS.','552256643','khaled23','ROLE_ADMIN');
 
 
 INSERT INTO users (birthday, deleted,email,enable,firstname,gender,lastname,id,password,mobile,username,role )
-VALUES ('1993-12-21','false','khhaal@gmail.com','true','Amer','MALE','alqahtani','108111111','$2a$10$VHmmTt4RsWH1ddMA92ZwROWbgsxUxv9C4cUDHzB2izktKiQr/WO4u','552256642','khaled24','ROLE_ORGANIZER');
+VALUES ('1993-12-21','false','khhaal@gmail.com','true','Amer','MALE','alqahtani','108111111','$2a$10$YxseEOraPI9ioDK//UmpJeOE3aCqAmp6t4dRJ2YX8i/vzTs/sylS.','552256642','khaled24','ROLE_ORGANIZER');
 
 
 INSERT INTO users (birthday, deleted,email,enable,firstname,gender,lastname,id,password,mobile,username,role )
-VALUES ('2008-11-30','false','yazeed@gmail.com','true','Khaleed','MALE','ALQAHTAN','1084214398','$2a$10$zpPyRi8WbXp94efrjF5jTO/XyUNUVU5N59E/LkRbqPtCHxxbl6L5q','552256641','khaled25','ROLE_USER');
+VALUES ('2008-11-30','false','yazeed@gmail.com','true','Khaleed','MALE','ALQAHTAN','1084214398','$2a$10$YxseEOraPI9ioDK//UmpJeOE3aCqAmp6t4dRJ2YX8i/vzTs/sylS.','552256641','khaled25','ROLE_USER');
 
 INSERT INTO users (birthday, deleted,email,enable,firstname,gender,lastname,id,password,mobile,username,role )
-VALUES ('1992-12-31','false','yazead@gmail.com','true','eid','MALE','ALQAHTAN','1084214111','$2a$10$1ijokLoN/ZkTkYEssqCHSea.p8AX/0paz9ndytqNB02EQudbkj8hi','552256645','khaled26','ROLE_USER');
+VALUES ('1992-12-31','false','yazead@gmail.com','true','eid','MALE','ALQAHTAN','1084214111','$2a$10$YxseEOraPI9ioDK//UmpJeOE3aCqAmp6t4dRJ2YX8i/vzTs/sylS.','552256645','khaled26','ROLE_USER');
 
 INSERT INTO users (birthday, deleted,email,enable,firstname,gender,lastname,id,password,mobile,username,role )
-VALUES ('1992-12-31','false','Abdullah@gmail.com','true','Abdullah','MALE','ALMAHMOUD','1084214811','$2a$10$1ijokLoN/ZkTkYEssqCHSea.p8AX/0paz9ndytqNB02EQudbkj8hi','552256646','MH1','ROLE_USER');
+VALUES ('1992-12-31','false','Abdullah@gmail.com','true','Abdullah','MALE','ALMAHMOUD','1084214811','$2a$10$YxseEOraPI9ioDK//UmpJeOE3aCqAmp6t4dRJ2YX8i/vzTs/sylS.','552256646','MH1','ROLE_USER');
+
+INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid )
+VALUES ('true','3','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Male','Family', 'Kids','2');
+
+INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid )
+VALUES ('true','3','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Male','Sport', 'Kids','2');
+
+INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid )
+VALUES ('true','3','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Male','Kids', 'Kids','2');
+
+INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid )
+VALUES ('true','3','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Male','Coffe', 'Kids','2');
+
+INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid )
+VALUES ('true','3','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Male','Cars', 'Cars','2');
+
+INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid )
+VALUES ('true','3','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Male','Food', 'Food','2');
+
+INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid )
+VALUES ('true','3','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Male','Football', 'Kids','2');
+
+INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid )
+VALUES ('true','3','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Male','Saudi Day', 'Kids','2');
+

@@ -1,6 +1,8 @@
 package com.khaileid.Entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 
 @Entity
 @Table (name = "Rate")
@@ -9,6 +11,9 @@ public class EntittRate {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Min(1)
+    @Max(5)
     private long attenderRate;
     private boolean rated;
     //**Relation**//

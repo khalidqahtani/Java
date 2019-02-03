@@ -30,6 +30,13 @@ public class LoginControl {
         map.put("firstname", String.valueOf(userService.findUsername(principal.getName()).getFirstname()));
         map.put("lastname", String.valueOf(userService.findUsername(principal.getName()).getLastname()));
         map.put("role",userService.findUsername(principal.getName()).getRoles().getRolename());
+        map.put("id", String.valueOf(userService.findUsername(principal.getName()).getId()));
+        map.put("email", String.valueOf(userService.findUsername(principal.getName()).getEmail()));
+        map.put("birthday", String.valueOf(userService.findUsername(principal.getName()).getBirthday()));
+        map.put("gender", String.valueOf(userService.findUsername(principal.getName()).getGender()));
+        map.put("mobile", String.valueOf(userService.findUsername(principal.getName()).getMobile()));
+
+
         return ResponseEntity.ok(map);
     }
 }

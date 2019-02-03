@@ -6,6 +6,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Max;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 
 public class CommentDTO {
@@ -13,7 +16,12 @@ public class CommentDTO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long commentid;
+
+    @Pattern(regexp = "[a-zA-Z0-9]{3,20}",message = "size 3-20 ")
+    @Size(min =3 , max = 20)
     private String comment;
+
+    @NotNull
     private String eventname;
     private String username;
 

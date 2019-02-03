@@ -5,6 +5,8 @@ import com.khaileid.Entity.EntityTicket;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 
 public class RateDTO {
 
@@ -12,6 +14,9 @@ public class RateDTO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Min(1)
+    @Max(5)
     private long attenderRate;
     private EntityTicket tid;
     private boolean rated;

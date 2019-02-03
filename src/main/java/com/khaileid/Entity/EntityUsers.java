@@ -10,7 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.*;
 import javax.validation.constraints.*;
-import java.util.List;
 
 @Entity
 @Table (name="Users")
@@ -40,7 +39,7 @@ public class EntityUsers {
     @NotNull
     @Column(unique = true)
     @Pattern(regexp = "[^\\s]+", message = "No space please")
-    @Pattern(regexp = "[a-zA-Z0-9]{4,11}",message = "can not have SYMBOL, and size 4-11 ")
+    @Pattern(regexp = "[a-z0-9]{4,11}",message = "can not have SYMBOL, and size 4-11 ")
     @Size(min = 4, max = 11, message = "size from 4-11")
     private String username;
 

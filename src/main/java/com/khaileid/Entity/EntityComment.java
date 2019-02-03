@@ -5,7 +5,9 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import javax.validation.constraints.Max;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 
 @Entity
@@ -15,11 +17,15 @@ public class EntityComment {
     @Id
     @GeneratedValue (strategy =GenerationType.IDENTITY)
     private long commentid;
+
+    @Pattern(regexp = "[a-zA-Z0-9]{3,20}",message = "size 3-20 ")
+    @Size(min =3 , max = 20)
     private String comment;
 
     @DateTimeFormat
     private LocalDateTime dateTime;
 
+    @NotNull
     private String eventname;
     private String username;
 

@@ -14,7 +14,7 @@ public interface EventService {
      List<EntityEvent> findByEventcity(String eventcity);
      List<EntityEvent> findByEventcityAndEventdate(String eventcity,LocalDate eventdate);
      List<EntityEvent> getAlleventActive();
-     List<EntityEvent> khalid();
+     List<EntityEvent> Top3event();
      EventDTO findByEventid(Long eventid);
 //     EventDTO countByLikecounter();
      ResponseEntity addEvent(EventDTO eventDTO, Long uid);

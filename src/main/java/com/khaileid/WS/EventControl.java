@@ -145,9 +145,9 @@ public class EventControl {
         return eventservice.getAlleventActive();
     }
 
-    @GetMapping(value = "/event/khalid")
-    public List<EntityEvent> khalid(){
-        return eventservice.khalid();
+    @GetMapping(value = "/event/Top3event")
+    public List<EntityEvent> Top3event(){
+        return eventservice.Top3event();
     }
 
     @GetMapping(value = "/myevents/{Orgnizerid}")

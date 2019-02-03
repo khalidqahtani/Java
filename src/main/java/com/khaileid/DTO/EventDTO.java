@@ -4,13 +4,11 @@ import com.khaileid.Entity.EntityComment;
 import com.khaileid.Entity.EntityUsers;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -22,35 +20,51 @@ public class EventDTO {
     private long eventid;
 
     @NotNull
-    @Size(max = 18, message = "character it max 18 ")
+    @Pattern(regexp = "[a-zA-Z0-9]{3,15}",message = "size 3-15 ")
+    @Size(min =3 , max = 15)
     private String nameevent;
 
     @NotNull
-    @Size(max = 18)
+    @Pattern(regexp = "[a-zA-Z]{3,15}",message = "size 3-15 ")
+    @Size(min =3 , max = 15)
     private String tybeevent;
 
     @NotNull
-    @Size(max = 18)
+    @Pattern(regexp = "[^\\s]+", message = "No space please")
+    @Pattern(regexp = "[a-zA-Z]{3,9}",message = "size 3-9 ")
+    @Size(min =3 , max = 9)
     private String genderevent;
 
-    @Size(max = 20, min = 2)
+    @NotNull
+    @Pattern(regexp = "[a-zA-Z0-9]{3,15}",message = "size 3-15 ")
+    @Size(min =3 , max = 15)
     private String eventstreet;
 
     @NotNull
-    @Size(max = 18)
+    @Pattern(regexp = "[a-zA-Z]{3,15}",message = "size 3-20 ")
+    @Size(min =3 , max = 20)
     private String eventcity;
 
     @NotNull
     private LocalDate eventdate;
 
+    @NotNull
     @DateTimeFormat
     private String eventtime;
+
+    @NotNull
+    @Pattern(regexp = "[a-zA-Z0-9]{3,48}",message = "size 3-48 ")
+    @Size(min =3 , max = 48)
     private String description;
+
+    @NotNull
+    private String specialneed;
 
     @NotNull
     @Min(1)
     @Max(300)
     private long capacity;
+
     private boolean edelete;
     private boolean approval;
     private long counter=0;
@@ -130,6 +144,14 @@ public class EventDTO {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getSpecialneed() {
+        return specialneed;
+    }
+
+    public void setSpecialneed(String specialneed) {
+        this.specialneed = specialneed;
     }
 
     public long getCapacity() {
