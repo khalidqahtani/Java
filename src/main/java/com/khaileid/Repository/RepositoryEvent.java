@@ -35,6 +35,8 @@ public interface RepositoryEvent extends JpaRepository<EntityEvent,Long> {
 //    Slice<EntityEvent> findFirst3EventdateOrderBy(LocalDate eventdate);
     List<EntityEvent> findTop3ByEventdateAfterAndEdeleteFalseAndApprovalTrueOrderByEventidDesc(LocalDate eventdate);
     List<EntityEvent> findTop3ByEventdateAfterAndEdeleteFalseAndApprovalTrueOrderByCounterDesc(LocalDate eventdate);
+    List<EntityEvent> findTop3ByEventdateAfterAndEdeleteFalseAndApprovalTrueAndCounterGreaterThanOrderByCounterDesc(LocalDate eventdate,long c);
+
 
 
 

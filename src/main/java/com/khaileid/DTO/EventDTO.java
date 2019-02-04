@@ -20,23 +20,20 @@ public class EventDTO {
     private long eventid;
 
     @NotNull
-    @Pattern(regexp = "[a-zA-Z0-9]{3,15}",message = "size 3-15 ")
     @Size(min =3 , max = 15)
     private String nameevent;
 
     @NotNull
-    @Pattern(regexp = "[a-zA-Z]{3,15}",message = "size 3-15 ")
     @Size(min =3 , max = 15)
     private String tybeevent;
 
     @NotNull
     @Pattern(regexp = "[^\\s]+", message = "No space please")
-    @Pattern(regexp = "[a-zA-Z]{3,9}",message = "size 3-9 ")
     @Size(min =3 , max = 9)
     private String genderevent;
 
     @NotNull
-    @Pattern(regexp = "[a-zA-Z0-9]{3,15}",message = "size 3-15 ")
+//    @Pattern(regexp = "[a-zA-Z0-9]{3,15}",message = "size 3-15 ")
     @Size(min =3 , max = 15)
     private String eventstreet;
 
@@ -53,10 +50,9 @@ public class EventDTO {
     private String eventtime;
 
     @NotNull
-    @Pattern(regexp = "[a-zA-Z0-9]{3,48}",message = "size 3-48 ")
     @Size(min =3 , max = 48)
     private String description;
-//
+
     @NotNull
     private String specialneed;
 

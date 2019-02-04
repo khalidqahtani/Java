@@ -150,6 +150,11 @@ public class EventControl {
         return eventservice.Top3event();
     }
 
+    @GetMapping(value = "/event/trending")
+    public List<EntityEvent> trending(){
+        return eventservice.trending();
+    }
+
     @GetMapping(value = "/myevents/{Orgnizerid}")
     public List<EventDTO> findMyEvent(@PathVariable Long Orgnizerid) {
         return eventservice.findMyEvent(Orgnizerid);

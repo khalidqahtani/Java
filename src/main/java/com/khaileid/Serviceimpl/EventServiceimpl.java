@@ -170,7 +170,13 @@ public class EventServiceimpl implements EventService {
     @Override
     public List<EntityEvent> Top3event() {
         LocalDate localDate= LocalDate.now().minusDays(1);
-        return repositoryevent.findTop3ByEventdateAfterAndEdeleteFalseAndApprovalTrueOrderByCounterDesc(localDate);
+        return repositoryevent.findTop3ByEventdateAfterAndEdeleteFalseAndApprovalTrueOrderByEventidDesc(localDate);
+    }
+
+    @Override
+    public List<EntityEvent> trending() {
+        LocalDate localDate= LocalDate.now().minusDays(1);
+        return repositoryevent.findTop3ByEventdateAfterAndEdeleteFalseAndApprovalTrueAndCounterGreaterThanOrderByCounterDesc(localDate,Long.valueOf(0));
     }
 //
     @Override

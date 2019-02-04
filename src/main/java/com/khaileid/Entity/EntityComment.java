@@ -18,7 +18,6 @@ public class EntityComment {
     @GeneratedValue (strategy =GenerationType.IDENTITY)
     private long commentid;
 
-    @Pattern(regexp = "[a-zA-Z0-9]{3,20}",message = "size 3-20 ")
     @Size(min =3 , max = 20)
     private String comment;
 
