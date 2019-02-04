@@ -61,7 +61,7 @@ public class EventDTO {
     private String specialneed;
 
     @NotNull
-    @Min(1)
+    @Min(20)
     @Max(300)
     private long capacity;
 

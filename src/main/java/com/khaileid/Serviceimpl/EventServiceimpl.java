@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -169,7 +170,7 @@ public class EventServiceimpl implements EventService {
     @Override
     public List<EntityEvent> Top3event() {
         LocalDate localDate= LocalDate.now().minusDays(1);
-        return repositoryevent.findTop3ByEventdateAfterAndEdeleteFalseAndApprovalTrueOrderByEventidDesc(localDate);
+        return repositoryevent.findTop3ByEventdateAfterAndEdeleteFalseAndApprovalTrueOrderByCounterDesc(localDate);
     }
 
     @Override

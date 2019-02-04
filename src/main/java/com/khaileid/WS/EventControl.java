@@ -54,7 +54,7 @@ public class EventControl {
     }
 
 
-    @PreAuthorize("(hasAnyRole('ADMIN','ORGANIZER'))")
+//    @PreAuthorize("(hasAnyRole('ADMIN','ORGANIZER'))")
     @PostMapping (value = "/event/{uid}")
     public ResponseEntity addEvent(@Valid @RequestBody EventDTO eventDTO, @Valid @PathVariable Long uid, BindingResult result)
     {

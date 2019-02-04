@@ -65,7 +65,7 @@ public class EntityEvent {
 
 
     @NotNull
-    @Min(1)
+    @Min(20)
     @Max(300)
     private long capacity;
 

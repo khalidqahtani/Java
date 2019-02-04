@@ -21,27 +21,27 @@ VALUES ('1992-12-31','false','yazead@gmail.com','true','eid','MALE','ALQAHTAN','
 INSERT INTO users (birthday, deleted,email,enable,firstname,gender,lastname,id,password,mobile,username,role )
 VALUES ('1992-12-31','false','Abdullah@gmail.com','true','Abdullah','MALE','ALMAHMOUD','1084214811','$2a$10$YxseEOraPI9ioDK//UmpJeOE3aCqAmp6t4dRJ2YX8i/vzTs/sylS.','552256646','MH1','ROLE_USER');
 
-INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid )
-VALUES ('true','3','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Male','Family', 'Kids','2');
+INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid,specialneed )
+VALUES ('true','68','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Male','Family', 'Kids','2','No');
 
-INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid )
-VALUES ('true','3','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Male','Sport', 'Kids','2');
+INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid,specialneed )
+VALUES ('true','90','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Male','Sport', 'Kids','2', 'No');
 
-INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid )
-VALUES ('true','3','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Male','Kids', 'Kids','2');
+INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid,specialneed )
+VALUES ('true','88','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Male','Kids', 'Kids','2','No');
 
-INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid )
-VALUES ('true','3','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Male','Coffe', 'Kids','2');
+INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid ,specialneed)
+VALUES ('true','100','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Male','Coffe', 'Kids','2','No');
 
-INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid )
-VALUES ('true','3','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Male','Cars', 'Cars','2');
+INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid,specialneed )
+VALUES ('true','20','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Male','Cars', 'Cars','2','No');
 
-INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid )
-VALUES ('true','3','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Male','Food', 'Food','2');
+INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid ,specialneed)
+VALUES ('true','30','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Male','Food', 'Food','2','No');
 
-INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid )
-VALUES ('true','3','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Male','Football', 'Kids','2');
+INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid,specialneed )
+VALUES ('true','66','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Male','Football', 'Kids','2','No');
 
-INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid )
-VALUES ('true','3','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Male','Saudi Day', 'Kids','2');
+INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid,specialneed )
+VALUES ('true','200','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Male','Saudi Day', 'Kids','2','No');
 
