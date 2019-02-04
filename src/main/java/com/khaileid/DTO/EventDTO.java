@@ -56,7 +56,7 @@ public class EventDTO {
     @Pattern(regexp = "[a-zA-Z0-9]{3,48}",message = "size 3-48 ")
     @Size(min =3 , max = 48)
     private String description;
-
+//
     @NotNull
     private String specialneed;
 

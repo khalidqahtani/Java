@@ -172,7 +172,7 @@ public class EventServiceimpl implements EventService {
         LocalDate localDate= LocalDate.now().minusDays(1);
         return repositoryevent.findTop3ByEventdateAfterAndEdeleteFalseAndApprovalTrueOrderByCounterDesc(localDate);
     }
-
+//
     @Override
     public List<EventDTO> findMyEvent(Long Orgnizerid) {
         EntityUsers entityUsers= repositoryUser.findByUserid(Orgnizerid);

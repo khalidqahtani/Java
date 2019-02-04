@@ -47,7 +47,7 @@ public class EntityEvent {
     @Pattern(regexp = "[a-zA-Z]{3,15}",message = "size 3-20 ")
     @Size(min =3 , max = 20)
     private String eventcity;
-
+//
     @NotNull
     private LocalDate eventdate;
 
