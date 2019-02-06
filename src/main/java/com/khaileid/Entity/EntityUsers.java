@@ -35,6 +35,8 @@ public class EntityUsers {
     @Pattern(regexp = "[a-zA-Z]{2,16}",message = "can not have DIGET, and size 2-16 ")
     @Size(min =2 , max = 16)
     private String lastname;
+    private String pic;
+
 
     @NotNull
     @Column(unique = true)
@@ -118,6 +120,14 @@ public class EntityUsers {
 
     public void setLastname(String lastname) {
         this.lastname = lastname;
+    }
+
+    public String getPic() {
+        return pic;
+    }
+
+    public void setPic(String pic) {
+        this.pic = pic;
     }
 
     public String getUsername() {

@@ -33,7 +33,7 @@ public class UserControl {
         return this.userService.getAllusers();
     }
 
-    @PreAuthorize("(hasAnyRole('ADMIN','ORGANIZER'))")
+//    @PreAuthorize("(hasAnyRole('ADMIN','ORGANIZER'))")
     @GetMapping (value = "/users/{userid}")
     public UserDTO findByUserid(@PathVariable Long userid) {
 
