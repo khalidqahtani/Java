@@ -20,11 +20,11 @@ public class EventDTO {
     private long eventid;
 
     @NotNull
-    @Size(min =3 , max = 15)
+    @Size(min =3 , max = 33)
     private String nameevent;
 
     @NotNull
-    @Size(min =3 , max = 15)
+    @Size(min =3 , max = 33)
     private String tybeevent;
 
     @NotNull
@@ -60,6 +60,9 @@ public class EventDTO {
     @Min(20)
     @Max(300)
     private long capacity;
+    private String pic;
+
+
 
     private boolean edelete;
     private boolean approval;
@@ -156,6 +159,14 @@ public class EventDTO {
 
     public void setCapacity(long capacity) {
         this.capacity = capacity;
+    }
+
+    public String getPic() {
+        return pic;
+    }
+
+    public void setPic(String pic) {
+        this.pic = pic;
     }
 
     public boolean isEdelete() {

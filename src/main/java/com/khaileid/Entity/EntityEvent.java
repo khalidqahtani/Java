@@ -23,11 +23,11 @@ public class EntityEvent {
 
     @NotNull
     @Column(unique = true)
-    @Size(min =3 , max = 15)
+    @Size(min =3 , max = 33)
     private String nameevent;
 
     @NotNull
-    @Size(min =3 , max = 15)
+    @Size(min =3 , max = 33)
     private String tybeevent;
 
     @NotNull
@@ -63,6 +63,8 @@ public class EntityEvent {
     @Min(20)
     @Max(300)
     private long capacity;
+    private String pic;
+
 
     private boolean edelete;
     private boolean approval;
@@ -129,6 +131,14 @@ public class EntityEvent {
 
     public String getEventcity() {
         return eventcity;
+    }
+
+    public String getPic() {
+        return pic;
+    }
+
+    public void setPic(String pic) {
+        this.pic = pic;
     }
 
     public void setEventcity(String eventcity) {

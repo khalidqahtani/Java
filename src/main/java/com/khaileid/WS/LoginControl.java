@@ -35,6 +35,7 @@ public class LoginControl {
         map.put("birthday", String.valueOf(userService.findUsername(principal.getName()).getBirthday()));
         map.put("gender", String.valueOf(userService.findUsername(principal.getName()).getGender()));
         map.put("mobile", String.valueOf(userService.findUsername(principal.getName()).getMobile()));
+        map.put("pic", String.valueOf(userService.findUsername(principal.getName()).getPic()));
 
 
         return ResponseEntity.ok(map);
