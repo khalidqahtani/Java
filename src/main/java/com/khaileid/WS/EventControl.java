@@ -47,7 +47,6 @@ public class EventControl {
         return ResponseEntity.ok(eventservice.findByEventcityAndEventdate(eventcity,LocalDate.parse(eventdate)));
     }
 
-    @PreAuthorize("(hasAnyRole('ADMIN','ORGANIZER'))")
     @GetMapping(value = "/findbyid/{eventid}")
     public EventDTO findByEventid(@PathVariable Long eventid){
         return eventservice.findByEventid(eventid);

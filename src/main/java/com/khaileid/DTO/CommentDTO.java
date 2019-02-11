@@ -9,6 +9,7 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class CommentDTO {
@@ -17,10 +18,10 @@ public class CommentDTO {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long commentid;
 
-    @Size(min =3 , max = 20)
+    @Size(min =3 , max = 24)
     private String comment;
 
-    @NotNull
+
     private String eventname;
     private String username;
 

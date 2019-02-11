@@ -18,13 +18,13 @@ public class EntityComment {
     @GeneratedValue (strategy =GenerationType.IDENTITY)
     private long commentid;
 
-    @Size(min =3 , max = 20)
+    @Size(min =3 , max = 24)
     private String comment;
 
     @DateTimeFormat
     private LocalDateTime dateTime;
 
-    @NotNull
+
     private String eventname;
     private String username;
 
