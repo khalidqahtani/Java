@@ -39,5 +39,10 @@ public class RateControl {
     public List<EntittRate> findAllrateForticket(@PathVariable Long tid) {
         return rateService.findAllrateForticket(tid);
     }
+
+    @GetMapping(value = "/rated/{id}")
+    public String getAverageAge(@PathVariable Long id){
+        return rateService.avg(id);
+    }
 }
 

@@ -15,6 +15,7 @@ public class EntittRate {
     @Min(1)
     @Max(5)
     private long attenderRate;
+    private long counter=0;
     private boolean rated;
     //**Relation**//
     @ManyToOne
@@ -55,5 +56,13 @@ public class EntittRate {
 
     public void setRated(boolean rated) {
         this.rated = rated;
+    }
+
+    public long getCounter() {
+        return counter;
+    }
+
+    public void setCounter(long counter) {
+        this.counter = counter;
     }
 }

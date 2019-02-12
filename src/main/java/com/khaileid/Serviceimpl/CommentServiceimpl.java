@@ -45,6 +45,7 @@ public class CommentServiceimpl implements CommentService {
             entityEvent.getComments().add(entityComment);
             entityComment.setEventname(entityEvent.getNameevent());
             entityComment.setUsername(entityUsers.getUsername());
+            entityComment.setEid(entityEvent.getEventid());
             return  ResponseEntity.ok(repositoryComment.save(entityComment));
         }
         return new ResponseEntity("please waite 10Sec to comment again", HttpStatus.BAD_REQUEST);

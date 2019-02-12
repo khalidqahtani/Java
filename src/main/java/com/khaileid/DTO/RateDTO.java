@@ -18,6 +18,7 @@ public class RateDTO {
     @Min(1)
     @Max(5)
     private long attenderRate;
+    private long counter=0;
     private EntityTicket tid;
     private boolean rated;
 
@@ -52,5 +53,13 @@ public class RateDTO {
 
     public void setRated(boolean rated) {
         this.rated = rated;
+    }
+
+    public long getCounter() {
+        return counter;
+    }
+
+    public void setCounter(long counter) {
+        this.counter = counter;
     }
 }

@@ -24,6 +24,10 @@ public class CommentDTO {
 
     private String eventname;
     private String username;
+    private Long eid;
+    private EventDTO eventid;
+
+
 
 
     @DateTimeFormat
@@ -68,5 +72,21 @@ public class CommentDTO {
 
     public void setCommentid(long commentid) {
         this.commentid = commentid;
+    }
+
+    public EventDTO getEventid() {
+        return eventid;
+    }
+
+    public void setEventid(EventDTO eventid) {
+        this.eventid = eventid;
+    }
+
+    public Long getEid() {
+        return eid;
+    }
+
+    public void setEid(Long eid) {
+        this.eid = eid;
     }
 }

@@ -8,6 +8,7 @@ import com.khaileid.Service.RateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,6 +45,7 @@ public class RateServiceimpl implements RateService {
                 entityTicket.setTicketrate(rate);
                 entittRate.setAttenderRate(rate);
                 entittRate.setTid(entityTicket);
+                entittRate.setCounter(1+entittRate.getCounter());
                 entittRate.setRated(true);
 //            entittRate.setAttenderRate(entittRate.getAttenderRate());
                 repositoryRate.save(entittRate);
@@ -58,4 +60,18 @@ public class RateServiceimpl implements RateService {
         return repositoryRate.findAllByTidTicketid(entityTicket);
     }
 
+    @Override
+    public String avg(Long id) {
+        double avg = 0;
+        double sum = repositoryRate.getSumRating(id);
+        double count= repositoryRate.countByTidEidOrgnizerIDUserid(id);
+        if(count>0)
+        { avg = sum/count;
+        }
+        DecimalFormat df = new DecimalFormat();
+        df.setMaximumFractionDigits(1);
+
+
+        return String.valueOf(df.format(avg));
+    }
 }

@@ -64,11 +64,12 @@ public class EventDTO {
 
 
 
+
     private boolean edelete;
     private boolean approval;
     private long counter=0;
     private UserDTO orgnizerID;
-    private List<CommentDTO> comments;
+//    private List<CommentDTO> comments;
 
 
 
@@ -202,12 +203,6 @@ public class EventDTO {
         this.orgnizerID = orgnizerID;
     }
 
-    public List<CommentDTO> getComments() {
-        return comments;
-    }
 
-    public void setComments(List<CommentDTO> comments) {
-        this.comments = comments;
-    }
 }
 

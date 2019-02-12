@@ -61,9 +61,11 @@ public class EventServiceimpl implements EventService {
     @Override
     public ResponseEntity addEvent(EventDTO eventDTO, Long uid) {
         EntityEvent entityEvent= new EntityEvent();
+        EntityUsers entityUsers = repositoryUser.findById(uid).get();
         entityEvent= modelMapper.map(eventDTO, EntityEvent.class);
         if (entityEvent.getEventdate().isAfter(LocalDate.now().minusDays(1))) {
             entityEvent.setOrgnizerID(repositoryUser.findByUserid(uid));
+
             repositoryevent.save(entityEvent);
             return new ResponseEntity("Event Has ADD",HttpStatus.ACCEPTED);
         }

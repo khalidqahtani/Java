@@ -27,6 +27,8 @@ public class EntityComment {
 
     private String eventname;
     private String username;
+    private Long eid;
+
 
 
     //**Relation**//
@@ -84,5 +86,13 @@ public class EntityComment {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public Long getEid() {
+        return eid;
+    }
+
+    public void setEid(Long eid) {
+        this.eid = eid;
     }
 }
