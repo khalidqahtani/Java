@@ -86,6 +86,7 @@ public class TicketServiceimpl implements TicketService {
             entityTicket.setUid(repositoryUser.findById(uid).get());
             entityTicket.setDate(LocalDate.now());
             entityEvent.setCounter(1+entityEvent.getCounter());
+            entityEvent.setAvailable(entityEvent.getCapacity()-entityEvent.getCounter());
             entityTicket.setEventname(repositoryEvent.findByEventid(eid).getNameevent());
             entityTicket.setDateevent(repositoryEvent.findByEventid(eid).getEventdate());
             entityTicket.setTimeevent(entityEvent.getEventtime());

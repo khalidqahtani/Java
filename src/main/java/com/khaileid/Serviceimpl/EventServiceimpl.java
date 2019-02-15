@@ -66,6 +66,7 @@ public class EventServiceimpl implements EventService {
         if (entityEvent.getEventdate().isAfter(LocalDate.now().minusDays(1))) {
             entityEvent.setOrgnizerID(repositoryUser.findByUserid(uid));
 
+
             repositoryevent.save(entityEvent);
             return new ResponseEntity("Event Has ADD",HttpStatus.ACCEPTED);
         }
