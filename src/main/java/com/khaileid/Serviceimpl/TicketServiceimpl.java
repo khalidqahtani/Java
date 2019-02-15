@@ -113,6 +113,7 @@ public class TicketServiceimpl implements TicketService {
        entityTicket.setTicketcancel(true);
        EntityEvent entityEvent=repositoryTicket.findById(ticketid).get().getEid();
        entityEvent.setCounter(entityEvent.getCounter()-1);
+       entityEvent.setAvailable(1+entityEvent.getAvailable());
        repositoryTicket.save(entityTicket);
        return new ResponseEntity("Ticket Has Deleted",HttpStatus.ACCEPTED);
     }
