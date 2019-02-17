@@ -145,8 +145,8 @@ public class EventControl {
     }
 
     @GetMapping(value = "/event/Top3event")
-    public List<EntityEvent> Top3event(){
-        return eventservice.Top3event();
+    public List<EntityEvent> NewEvent(){
+        return eventservice.NewEvent();
     }
 
     @GetMapping(value = "/event/trending")

@@ -14,7 +14,7 @@ public interface EventService {
      List<EntityEvent> findByEventcity(String eventcity);
      List<EntityEvent> findByEventcityAndEventdate(String eventcity,LocalDate eventdate);
      List<EntityEvent> getAlleventActive();
-     List<EntityEvent> Top3event();
+     List<EntityEvent> NewEvent();
      List<EntityEvent> trending();
 
      EventDTO findByEventid(Long eventid);
