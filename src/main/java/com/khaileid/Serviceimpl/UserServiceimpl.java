@@ -1,7 +1,6 @@
 package com.khaileid.Serviceimpl;
 
 import com.khaileid.DTO.UserDTO;
-import com.khaileid.Entity.EntityEvent;
 import com.khaileid.Entity.EntityRoles;
 import com.khaileid.Entity.EntityUsers;
 import com.khaileid.Repository.RepositoryEvent;
@@ -142,5 +141,12 @@ public class UserServiceimpl implements UserService {
         EntityRoles entityRoles = repositoryRoles.findByRolename(roles);
         return repositoryuser.findByRoles(entityRoles);
     }
+
+    public boolean isUserEnabled(Long id) { return repositoryuser.existsByUseridAndEnableTrue(id);}
+
+    public boolean existsByUsernameAndAndEnableTrue(String username) {
+        return repositoryuser.existsByUsernameAndAndEnableTrue(username);
+    }
+
 
 }

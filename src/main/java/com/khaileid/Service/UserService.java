@@ -22,6 +22,8 @@ public interface UserService  {
      ResponseEntity unEnableById(Long userid);
      List<EntityUsers> findAllDeleted();
      List<EntityUsers> findByRoles (String roles);
+     boolean isUserEnabled(Long id);
+     boolean existsByUsernameAndAndEnableTrue(String username);
 
 
     }

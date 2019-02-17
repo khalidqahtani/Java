@@ -24,12 +24,12 @@ public class UserDTO {
     private String id;
 
     @NotNull
-    @Pattern(regexp = "[a-zA-Z]{2,10}",message = "can not have DIGET, and size 2-10 ")
+    @Pattern(regexp = "[a-zA-Z\\s]{2,10}",message = "can not have DIGET, and size 2-10 ")
     @Size(min =2 , max = 10)
     private String firstname;
 
     @NotNull
-    @Pattern(regexp = "[a-zA-Z]{2,16}",message = "can not have DIGET, and size 2-16 ")
+    @Pattern(regexp = "[a-zA-Z\\s]{2,16}",message = "can not have DIGET, and size 2-16 ")
     @Size(min =2 , max = 16)
     private String lastname;
     private String pic;

@@ -40,7 +40,7 @@ public class EntityEvent {
     private String eventstreet;
 
     @NotNull
-    @Pattern(regexp = "[a-zA-Z]{3,15}",message = "size 3-20 ")
+    @Pattern(regexp = "[a-zA-Z\\s]{3,15}",message = "size 3-20 ")
     @Size(min =3 , max = 20)
     private String eventcity;
 //
