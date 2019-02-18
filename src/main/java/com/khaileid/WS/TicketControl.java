@@ -63,10 +63,10 @@ public class TicketControl {
     //user book ticket eventid/ateenderid
     @PreAuthorize("(hasRole('USER'))")
     @GetMapping (value = "/book/{eid}/{uid}")
-    public EntityTicket addTicket(@Valid @PathVariable Long eid, @PathVariable Long uid) {
+    public ResponseEntity addTicket(@Valid @PathVariable Long eid, @PathVariable Long uid) {
 
 //        emailsender.notificationBookTicket(eid, uid);
-        return ticketService.addTicket(eid, uid);
+        return ResponseEntity.ok(ticketService.addTicket(eid, uid));
     }
 
     @PreAuthorize("(hasAnyRole('ADMIN','ORGANIZER'))")

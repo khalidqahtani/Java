@@ -29,10 +29,11 @@ public class NotificationService {
 	private RepositoryUser repositoryUser;
 
 
-	public void notificationAddAtender(@Valid UserDTO userDTO) throws MailException {
+	public void notificationAddAtender(UserDTO userDTO) throws MailException {
 		// send email
 		SimpleMailMessage mail = new SimpleMailMessage();
 		mail.setTo(userDTO.getEmail());
+		mail.setFrom("Event Management");
 		mail.setSubject("Dear. " + userDTO.getUsername());
 		mail.setText("Hello " + userDTO.getUsername() + ", Think you for register  !");
 
@@ -40,7 +41,7 @@ public class NotificationService {
 	}
 
 	public void notificationUpdateEvent(Long eventid) throws MailException {
-//		 send email
+
 		SimpleMailMessage mail = new SimpleMailMessage();
 		EntityEvent entityEvent = repositoryEvent.findById(eventid).get();
 

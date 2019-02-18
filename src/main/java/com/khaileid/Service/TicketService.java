@@ -20,7 +20,7 @@ public interface TicketService {
 
 
 
-     EntityTicket addTicket(Long eid, Long uid);
+     ResponseEntity addTicket(Long eid, Long uid);
      ResponseEntity updateTicket(EntityTicket entityTicket, Long ticketid);
      List<EntityTicket> findAllDeleted();
      ResponseEntity UserpresentById(Long ticketid);

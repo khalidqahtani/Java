@@ -8,6 +8,7 @@ import com.khaileid.Entity.EntityUsers;
 import com.khaileid.Repository.RepositoryEvent;
 import com.khaileid.Repository.RepositoryTicket;
 import com.khaileid.Repository.RepositoryUser;
+import com.khaileid.Service.NotificationService;
 import com.khaileid.Service.TicketService;
 import com.khaileid.config.ObjectMapperUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,8 @@ public class TicketServiceimpl implements TicketService {
     private RepositoryUser repositoryUser;
     @Autowired
     private RepositoryEvent repositoryEvent;
+    @Autowired
+    private NotificationService notificationService;
 
 
     @Override
@@ -75,7 +78,7 @@ public class TicketServiceimpl implements TicketService {
 //    public ResponseEntity addUser(EntityTicket entityTicket, Long uid, Long eid) {repositoryTicket.save(entityTicket); }
 
     @Override
-    public EntityTicket addTicket(Long eid, Long uid) {
+    public ResponseEntity addTicket(Long eid, Long uid) {
         EntityTicket entityTicket = new EntityTicket();
         EntityEvent entityEvent = (repositoryEvent.findById(eid).get());
         EntityUsers entityUsers = (repositoryUser.findById(uid).get());
@@ -90,9 +93,10 @@ public class TicketServiceimpl implements TicketService {
             entityTicket.setEventname(repositoryEvent.findByEventid(eid).getNameevent());
             entityTicket.setDateevent(repositoryEvent.findByEventid(eid).getEventdate());
             entityTicket.setTimeevent(entityEvent.getEventtime());
-            return repositoryTicket.save(entityTicket);
+            repositoryTicket.save(entityTicket);
+            notificationService.notificationBookTicket(eid, uid);
+            return new ResponseEntity("Book Ticket",HttpStatus.ACCEPTED);
 
-            ////
         }else {
             return null;
         }
@@ -115,6 +119,8 @@ public class TicketServiceimpl implements TicketService {
        entityEvent.setCounter(entityEvent.getCounter()-1);
        entityEvent.setAvailable(1+entityEvent.getAvailable());
        repositoryTicket.save(entityTicket);
+       notificationService.notificationCancelTicket(ticketid);
+
        return new ResponseEntity("Ticket Has Deleted",HttpStatus.ACCEPTED);
     }
 

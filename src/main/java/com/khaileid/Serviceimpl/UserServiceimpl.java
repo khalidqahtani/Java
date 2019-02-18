@@ -6,6 +6,7 @@ import com.khaileid.Entity.EntityUsers;
 import com.khaileid.Repository.RepositoryEvent;
 import com.khaileid.Repository.RepositoryRoles;
 import com.khaileid.Repository.RepositoryUser;
+import com.khaileid.Service.NotificationService;
 import com.khaileid.Service.UserService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,8 @@ public class UserServiceimpl implements UserService {
     private RepositoryUser repositoryuser;
     @Autowired
     private RepositoryRoles repositoryRoles;
+    @Autowired
+    private NotificationService notificationService;
     @Autowired
     private RepositoryEvent repositoryEvent;
     @Autowired
@@ -86,6 +89,7 @@ public class UserServiceimpl implements UserService {
             entityUsers.setPassword(encoded);
             entityUsers.setEnable(true);
             repositoryuser.save(entityUsers);
+            notificationService.notificationAddAtender(userDTO);
             return entityUsers;
         }
         return null;

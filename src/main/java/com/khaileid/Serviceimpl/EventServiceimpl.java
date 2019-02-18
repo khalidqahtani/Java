@@ -2,11 +2,13 @@ package com.khaileid.Serviceimpl;
 
 import com.khaileid.DTO.EventDTO;
 import com.khaileid.Entity.EntityEvent;
+import com.khaileid.Entity.EntityTicket;
 import com.khaileid.Entity.EntityUsers;
 import com.khaileid.Repository.RepositoryEvent;
 import com.khaileid.Repository.RepositoryTicket;
 import com.khaileid.Repository.RepositoryUser;
 import com.khaileid.Service.EventService;
+import com.khaileid.Service.NotificationService;
 import com.khaileid.config.ObjectMapperUtils;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +28,8 @@ public class EventServiceimpl implements EventService {
     private RepositoryEvent repositoryevent;
     @Autowired
     private RepositoryUser repositoryUser;
+    @Autowired
+    private NotificationService notificationService;
     @Autowired
     private RepositoryTicket repositoryTicket;
     @Autowired
@@ -82,6 +86,7 @@ public class EventServiceimpl implements EventService {
         entityEvent.setEventid(eventid);
         entityEvent.setOrgnizerID(entityEvent1.getOrgnizerID());
         repositoryevent.save(entityEvent);
+        notificationService.notificationUpdateEvent(eventid);
         return new ResponseEntity("Event Has Updated",HttpStatus.ACCEPTED);
 
     }
@@ -94,6 +99,7 @@ public class EventServiceimpl implements EventService {
         entityEvent.setEdelete(true);
         entityEvent.setApproval(false);
         repositoryevent.save(entityEvent);
+        notificationService.notificationEventCancel(eventid);
         return new ResponseEntity("Event Has DELETED", HttpStatus.ACCEPTED);
     }
 
