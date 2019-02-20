@@ -53,6 +53,7 @@ public class LoginControl {
             map.put("userid", userDTO.getUserid());
             map.put("firstname", userService.findUsername(loginBody.getUsername()).getFirstname());
             map.put("lastname", userService.findUsername(loginBody.getUsername()).getLastname());
+            map.put("pic", userService.findUsername(loginBody.getUsername()).getPic());
             map.put("role", userService.findUsername(loginBody.getUsername()).getRoles().getRolename());
             return ResponseEntity.ok(map);
         }

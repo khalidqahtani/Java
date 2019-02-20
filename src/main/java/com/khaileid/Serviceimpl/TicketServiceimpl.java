@@ -98,7 +98,7 @@ public class TicketServiceimpl implements TicketService {
             return new ResponseEntity("Book Ticket",HttpStatus.ACCEPTED);
 
         }else {
-            return null;
+            throw new RuntimeException("You Already Book");
         }
     }
 

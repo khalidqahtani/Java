@@ -104,6 +104,7 @@ public class UserServiceimpl implements UserService {
         entityUsers.setPassword(encoded);
         entityUsers.setUserid(userid);
         entityUsers.setRoles(entityUsers1.getRoles());
+        entityUsers.setEnable(true);
         return repositoryuser.save(entityUsers);
     }
 
