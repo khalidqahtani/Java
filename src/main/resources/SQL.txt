@@ -1,50 +1,32 @@
-INSERT INTO roles(rolename) VALUES ('ROLE_ADMIN');
-INSERT INTO roles(rolename)VALUES ('ROLE_ORGANIZER');
-INSERT INTO roles(rolename)VALUES ('ROLE_USER');
+INSERT INTO roles(rolename) VALUES ('ROLE_ADMIN'),('ROLE_ORGANIZER'),('ROLE_USER');
 
 
 
 INSERT INTO users (birthday, deleted,email,enable,firstname,gender,lastname,id,password,mobile,username,pic ,role )
-VALUES ('1993-12-21','false','ke434028777@gmail.com','true','khalid','MALE','alqahtani','1084214368','$2a$10$YxseEOraPI9ioDK//UmpJeOE3aCqAmp6t4dRJ2YX8i/vzTs/sylS.','552256643','admin','https://i.imgur.com/QaZ6Vdy.jpg','ROLE_ADMIN');
-
-INSERT INTO users (birthday, deleted,email,enable,firstname,gender,lastname,id,password,mobile,username,pic,role )
-VALUES ('1992-12-31','false','Abdullah@gmail.com','true','Abdullah','MALE','ALMAHMOUD','1084214811','$2a$10$YxseEOraPI9ioDK//UmpJeOE3aCqAmp6t4dRJ2YX8i/vzTs/sylS.','552256646','org1','https://i.imgur.com/irKx5ZT.jpg','ROLE_ORGANIZER');
-
-INSERT INTO users (birthday, deleted,email,enable,firstname,gender,lastname,id,password,mobile,username,pic,role )
-VALUES ('1993-12-21','false','muhaanad@gmail.com','true','Muhanad','MALE','alomran','1081098511','$2a$10$YxseEOraPI9ioDK//UmpJeOE3aCqAmp6t4dRJ2YX8i/vzTs/sylS.','553356642','org2','https://i.imgur.com/1Vs2YI1.jpg','ROLE_ORGANIZER');
-
-INSERT INTO users (birthday, deleted,email,enable,firstname,gender,lastname,id,password,mobile,username,pic,role )
-VALUES ('1993-12-21','false','khhaal@gmail.com','true','Ahmed','MALE','Al Howimel','1081111181','$2a$10$YxseEOraPI9ioDK//UmpJeOE3aCqAmp6t4dRJ2YX8i/vzTs/sylS.','552256642','org3','https://i.imgur.com/VJbu9n3.jpg','ROLE_ORGANIZER');
-
-
-INSERT INTO users (birthday, deleted,email,enable,firstname,gender,lastname,id,password,mobile,username,pic,role )
-VALUES ('2008-11-30','false','yazeed@gmail.com','true','Yazeed','MALE','AlMansour','1084214398','$2a$10$YxseEOraPI9ioDK//UmpJeOE3aCqAmp6t4dRJ2YX8i/vzTs/sylS.','552256641','user1','https://i.imgur.com/I4hJxqO.jpg','ROLE_USER');
-
-INSERT INTO users (birthday, deleted,email,enable,firstname,gender,lastname,id,password,mobile,username,pic,role )
-VALUES ('1992-12-31','false','yazead@gmail.com','true','Ali','MALE','Aljabreen','1084214111','$2a$10$YxseEOraPI9ioDK//UmpJeOE3aCqAmp6t4dRJ2YX8i/vzTs/sylS.','552256645','user2','https://i.imgur.com/vtvJCo0.jpg','ROLE_USER');
+VALUES ('1993-12-21','false','ke434028777@gmail.com','true','khalid','Male','alqahtani','1084214368','$2a$10$YxseEOraPI9ioDK//UmpJeOE3aCqAmp6t4dRJ2YX8i/vzTs/sylS.','552256643','admin','https://i.imgur.com/QaZ6Vdy.jpg','ROLE_ADMIN'),
+('1992-12-31','false','Abdullah@gmail.com','true','Abdullah','Male','ALMAHMOUD','1084214811','$2a$10$YxseEOraPI9ioDK//UmpJeOE3aCqAmp6t4dRJ2YX8i/vzTs/sylS.','552256646','org1','https://i.imgur.com/irKx5ZT.jpg','ROLE_ORGANIZER'),
+('1993-12-21','false','muhaanad@gmail.com','true','Muhanad','Male','alomran','1081098511','$2a$10$YxseEOraPI9ioDK//UmpJeOE3aCqAmp6t4dRJ2YX8i/vzTs/sylS.','553356642','org2','https://i.imgur.com/1Vs2YI1.jpg','ROLE_ORGANIZER'),
+('1993-12-21','false','khhaal@gmail.com','true','Ahmed','Male','Al Howimel','1081111181','$2a$10$YxseEOraPI9ioDK//UmpJeOE3aCqAmp6t4dRJ2YX8i/vzTs/sylS.','552256642','org3','https://i.imgur.com/VJbu9n3.jpg','ROLE_ORGANIZER'),
+('2008-11-30','false','yazeed@gmail.com','true','Yazeed','Male','AlMansour','1084214398','$2a$10$YxseEOraPI9ioDK//UmpJeOE3aCqAmp6t4dRJ2YX8i/vzTs/sylS.','552256641','user1','https://i.imgur.com/I4hJxqO.jpg','ROLE_USER'),
+('1992-12-31','false','yazead@gmail.com','true','Ali','Male','Aljabreen','1084214111','$2a$10$YxseEOraPI9ioDK//UmpJeOE3aCqAmp6t4dRJ2YX8i/vzTs/sylS.','552256645','user2','https://i.imgur.com/vtvJCo0.jpg','ROLE_USER');
 
 
 INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid,specialneed,pic,available )
-VALUES ('true','33','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Family','The Marvel Experience KSA', 'Shows & Performance','2','No','https://i.imgur.com/thG9TcA.jpg','33');
+VALUES ('true','33','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Family','The Marvel Experience KSA', 'Shows & Performance','2','No','https://i.imgur.com/thG9TcA.jpg','33'),
+('true','90','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Family','Smurfs', 'Shows & Performance','2', 'Yes','https://i.imgur.com/i2RGBTB.jpg','90'),
+('true','88','0','welcome to new event','false','Dammam','2020-01-01','King Fahad','21:00 PM','Family','Eid Nights', 'Arts','3','No','https://i.imgur.com/1aZOSRb.jpg','88'),
+('true','100','0','welcome to new event','false','Dammam','2020-01-01','King Fahad','21:00 PM','Female','Tezhaby', 'Fashion','2','No','https://i.imgur.com/KbqaSZe.jpg','100'),
+('true','20','0','welcome to new event','false','Jeddah','2020-01-01','King Fahad','21:00 PM','Female','Hakaya Ramadan Expo', 'Arts','4','Yes','https://i.imgur.com/1zYMusS.jpg','20'),
+('true','30','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Male','Hena Maak', 'Shows & Performance','4','No','https://i.imgur.com/xkxRWgV.jpg','30'),
+('true','66','0','welcome to new event','false','Najran','2020-01-01','King Fahad','21:00 PM','Male','Najran', 'Arts','4','No','https://i.imgur.com/obXzyHK.jpg','60'),
+('true','200','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Family','Manga Con', 'Shows & Performance','2','Yes','https://i.imgur.com/G3fBw2Z.jpg','200');
 
-INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid,specialneed,pic,available )
-VALUES ('true','90','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Family','Smurfs', 'Shows & Performance','2', 'Yes','https://i.imgur.com/i2RGBTB.jpg','90');
 
-INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid,specialneed,pic,available )
-VALUES ('true','88','0','welcome to new event','false','Dammam','2020-01-01','King Fahad','21:00 PM','Family','Eid Nights', 'Arts','3','No','https://i.imgur.com/1aZOSRb.jpg','88');
+username: admin
+password: 11223344
 
-INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid ,specialneed,pic,available)
-VALUES ('true','100','0','welcome to new event','false','Dammam','2020-01-01','King Fahad','21:00 PM','Female','Tezhaby', 'Fashion','2','No','https://i.imgur.com/KbqaSZe.jpg','100');
+username: org1 , org2 , org3
+password: 11223344
 
-INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid,specialneed,pic,available )
-VALUES ('true','20','0','welcome to new event','false','Jeddah','2020-01-01','King Fahad','21:00 PM','Female','Hakaya Ramadan Expo', 'Arts','4','Yes','https://i.imgur.com/1zYMusS.jpg','20');
-
-INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid ,specialneed,pic,available)
-VALUES ('true','30','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Male','Hena Maak', 'Shows & Performance','4','No','https://i.imgur.com/xkxRWgV.jpg','30');
-
-INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid,specialneed,pic,available )
-VALUES ('true','66','0','welcome to new event','false','Najran','2020-01-01','King Fahad','21:00 PM','Male','Najran', 'Arts','4','No','https://i.imgur.com/obXzyHK.jpg','60');
-
-INSERT INTO event (approval,capacity,counter,description,edelete,eventcity,eventdate,eventstreet,eventtime,genderevent,nameevent,tybeevent,orgnizerid_userid,specialneed,pic,available )
-VALUES ('true','200','0','welcome to new event','false','Riyadh','2020-01-01','King Fahad','21:00 PM','Family','Manga Con', 'Shows & Performance','2','Yes','https://i.imgur.com/G3fBw2Z.jpg','200');
-
+username: user1 , user2
+password: 11223344
