@@ -16,7 +16,7 @@ public class TicketDTO {
 
     private LocalDate date;
 
-
+    private boolean ticketbook;
     private boolean ticketcancel;
     private boolean userpresent;
     private String eventname;
@@ -105,5 +105,13 @@ public class TicketDTO {
 
     public void setEid(EventDTO eid) {
         this.eid = eid;
+    }
+
+    public boolean isTicketbook() {
+        return ticketbook;
+    }
+
+    public void setTicketbook(boolean ticketbook) {
+        this.ticketbook = ticketbook;
     }
 }

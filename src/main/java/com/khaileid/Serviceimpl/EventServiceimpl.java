@@ -99,7 +99,7 @@ public class EventServiceimpl implements EventService {
         entityEvent.setEdelete(true);
         entityEvent.setApproval(false);
         repositoryevent.save(entityEvent);
-        notificationService.notificationEventCancel(eventid);
+//        notificationService.notificationEventCancel(eventid);
         return new ResponseEntity("Event Has DELETED", HttpStatus.ACCEPTED);
     }
 

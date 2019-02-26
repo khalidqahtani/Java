@@ -20,6 +20,7 @@ public class EntityTicket {
 
     private LocalDate date;
 
+    private boolean ticketbook;
     private boolean ticketcancel;
     private boolean userpresent;
     private String eventname;
@@ -113,5 +114,13 @@ public class EntityTicket {
 
     public void setTicketrate(int ticketrate) {
         this.ticketrate = ticketrate;
+    }
+
+    public boolean isTicketbook() {
+        return ticketbook;
+    }
+
+    public void setTicketbook(boolean ticketbook) {
+        this.ticketbook = ticketbook;
     }
 }

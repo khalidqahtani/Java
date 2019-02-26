@@ -17,7 +17,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -93,8 +92,9 @@ public class TicketServiceimpl implements TicketService {
             entityTicket.setEventname(repositoryEvent.findByEventid(eid).getNameevent());
             entityTicket.setDateevent(repositoryEvent.findByEventid(eid).getEventdate());
             entityTicket.setTimeevent(entityEvent.getEventtime());
+            entityTicket.setTicketbook(true);
             repositoryTicket.save(entityTicket);
-            notificationService.notificationBookTicket(eid, uid);
+//            notificationService.notificationBookTicket(eid, uid);
             return new ResponseEntity("Book Ticket",HttpStatus.ACCEPTED);
 
         }else {
@@ -119,7 +119,7 @@ public class TicketServiceimpl implements TicketService {
        entityEvent.setCounter(entityEvent.getCounter()-1);
        entityEvent.setAvailable(1+entityEvent.getAvailable());
        repositoryTicket.save(entityTicket);
-       notificationService.notificationCancelTicket(ticketid);
+//       notificationService.notificationCancelTicket(ticketid);
 
        return new ResponseEntity("Ticket Has Deleted",HttpStatus.ACCEPTED);
     }

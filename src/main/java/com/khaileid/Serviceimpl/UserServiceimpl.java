@@ -89,7 +89,7 @@ public class UserServiceimpl implements UserService {
             entityUsers.setPassword(encoded);
             entityUsers.setEnable(true);
             repositoryuser.save(entityUsers);
-            notificationService.notificationAddAtender(userDTO);
+//            notificationService.notificationAddAtender(userDTO);
             return entityUsers;
         }
         return null;
