@@ -110,7 +110,8 @@ public class UserControl {
 
     @PreAuthorize("(hasRole('ADMIN'))")
     @PutMapping (value = "/adminaccess/users/enable/{userid}")
-    public ResponseEntity enableById(@PathVariable Long userid) { return ResponseEntity.ok(userService.enableById(userid));}
+    public ResponseEntity enableById(@PathVariable Long userid) {
+        return ResponseEntity.ok(userService.enableById(userid));}
 
     @PreAuthorize("(hasRole('ADMIN'))")
     @PutMapping (value = "/adminaccess/users/unenable/{userid}")
